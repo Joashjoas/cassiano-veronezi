@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Cassiano Veronezi | Ortopedista e Traumatologista - Cirurgia do Joelho</title>
+    <meta name="description" content="Especialista em Cirurgia do Joelho, LCA, Menisco e Artrose em Toledo e Cascavel. Recupere sua mobilidade com o Dr. Cassiano Veronezi.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e2a40',        /* Azul Marinho Premium */
+                        secondary: '#159ec8',      /* Azul Claro Destaque */
+                        accent: '#ff8c73',         /* Coral para Call to Action */
+                        surface: '#f8fafc',        /* Fundo claro */
+                        dark: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px rgba(14, 42, 64, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(21, 158, 200, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(14, 42, 64, 0.03) 0%, transparent 50%);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #159ec8;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 glass-header border-b border-slate-100 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-4 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <!-- Logo para Desktop -->
+                <img src="imgs/Logotipo.png" alt="Dr. Cassiano Veronezi" class="hidden md:block h-12 w-auto">
+                <!-- Logo para Mobile -->
+                <img src="imgs/logo.png" alt="Dr. Cassiano Veronezi" class="block md:hidden h-8 w-auto">
+            </a>
+
+            <!-- Nav Desktop -->
+            <nav class="hidden lg:flex gap-8 text-sm font-semibold text-primary/70">
+                <a href="#procurar" class="hover:text-secondary transition-colors">Quando Procurar?</a>
+                <a href="#servicos" class="hover:text-secondary transition-colors">Serviços</a>
+                <a href="#depoimentos" class="hover:text-secondary transition-colors">Depoimentos</a>
+                <a href="#sobre" class="hover:text-secondary transition-colors">Sobre</a>
+                <a href="#faq" class="hover:text-secondary transition-colors">Dúvidas</a>
+            </nav>
+
+            <!-- CTA Mobile/Desktop -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5545999999999" target="_blank" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-secondary hover:shadow-lg transition-all flex items-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Agendar Consulta</span>
+                </a>
+                <button class="lg:hidden text-primary p-1" id="menu-toggle">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="lg:hidden hidden fixed inset-x-0 top-[73px] bg-white border-b border-slate-100 shadow-xl p-6">
+            <nav class="flex flex-col gap-5 text-base font-semibold text-primary">
+                <a href="#procurar" class="p-2 border-b border-slate-50">Quando Procurar?</a>
+                <a href="#servicos" class="p-2 border-b border-slate-50">Serviços</a>
+                <a href="#depoimentos" class="p-2 border-b border-slate-50">Depoimentos</a>
+                <a href="#sobre" class="p-2 border-b border-slate-50">Sobre</a>
+                <a href="#faq" class="p-2">Dúvidas Frequentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-gradient overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                
+                <!-- Conteúdo Hero -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-xs font-bold tracking-widest uppercase mb-6 border border-secondary/20">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+                        </span>
+                        Ortopedia e Traumatologia de Alta Performance
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading text-primary leading-[1.1] mb-8">
+                        Ortopedista Especialista em <span class="text-secondary italic">Joelho</span> em Cascavel
+                    </h1>
+                    
+                    <p class="text-lg lg:text-xl text-slate-600 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10">
+                        O Dr. Cassiano Veronezi une tecnologia avançada e tratamento humanizado para cuidar da saúde do seu joelho, devolvendo o bem-estar que você merece.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5545999999999" target="_blank" class="px-8 py-4 bg-primary text-white rounded-xl text-lg font-bold hover:bg-secondary hover:-translate-y-1 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                            Quero agendar uma avaliação
+                        </a>
+                        <div class="flex items-center gap-4 px-6 py-4 bg-white/50 backdrop-blur rounded-xl border border-slate-200">
+                            <div class="flex -space-x-2">
+                                <span class="w-8 h-8 rounded-full bg-slate-200 border-2 border-white"></span>
+                                <span class="w-8 h-8 rounded-full bg-slate-300 border-2 border-white"></span>
+                                <span class="w-8 h-8 rounded-full bg-slate-400 border-2 border-white"></span>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mb-1 text-center font-heading">Satisfação</p>
+                                <p class="text-sm font-bold text-primary leading-none">+500 Pacientes Felizes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Selos de Confiança -->
+                    <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="award" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-tighter">Membro SBOT</span>
+                        </div>
+                        <div class="flex items-center gap-2 border-l border-slate-300 pl-8">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-tighter">Especialista SBCJ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagem Hero (Maior) -->
+                <div class="w-full lg:w-1/2 relative order-first lg:order-last">
+                    <div class="relative max-w-[650px] mx-auto group">
+                        <!-- Shape de fundo -->
+                        <div class="absolute -inset-4 bg-secondary/5 rounded-[40px] rotate-3 transition-transform group-hover:rotate-6"></div>
+                        <div class="absolute -inset-4 border-2 border-primary/5 rounded-[40px] -rotate-2"></div>
+                        
+                        <!-- Imagem do Doutor (Banner) -->
+                        <div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl">
+                             <img src="imgs/cassiano-veronezi-banner.png" alt="Dr. Cassiano Veronezi" class="w-full h-auto transform hover:scale-105 transition-transform duration-1000">
+                             
+                             <!-- Bio floating card -->
+                             <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                                 <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+                                     <i data-lucide="user-check" class="w-6 h-6"></i>
+                                 </div>
+                                 <div>
+                                     <h4 class="text-sm font-bold text-primary leading-tight">Dr. Cassiano Veronezi</h4>
+                                     <p class="text-[10px] font-semibold text-secondary uppercase tracking-widest">CRM-PR 28913 | RQE 21542</p>
+                                 </div>
+                             </div>
+                        </div>
+
+                        <!-- Elementos Decorativos -->
+                        <div class="absolute -top-10 -right-10 w-24 h-24 bg-accent/10 rounded-full blur-2xl animate-pulse"></div>
+                        <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Problemas Section (Quando procurar) -->
+    <section id="procurar" class="py-24 bg-surface">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Identificando Sinais</span>
+                <h2 class="text-3xl lg:text-5xl font-bold font-heading text-primary mb-6">Quando procurar um ortopedista do joelho?</h2>
+                <p class="text-slate-500 text-lg leading-relaxed">Não ignore as dores que limitam seu dia a dia. Identificar o problema cedo é a chave para uma recuperação mais rápida e menos invasiva.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Dor 1 -->
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="alert-circle" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Pane Estalos e Inchaço</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Sente que o joelho "falha" ou escuta estalos acompanhados de dor? Isso pode indicar lesões de ligamento (LCA) ou menisco.</p>
+                </div>
+                <!-- Dor 2 -->
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Dificuldade de Movimento</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Rigidez matinal ou dificuldade para subir e descer escadas são sinais comuns de artrose ou processos degenerativos.</p>
+                </div>
+                <!-- Dor 3 -->
+                <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4">Traumas Esportivos</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">Dores agudas após atividades físicas ou entorses necessitam de avaliação imediata para evitar agravamento da lesão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Grid -->
+    <section id="servicos" class="py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end text-center lg:text-left gap-6 mb-16 reveal">
+                <div class="max-w-xl">
+                    <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Especialidades Avançadas</span>
+                    <h2 class="text-3xl lg:text-5xl font-bold font-heading text-primary">Nossos Serviços</h2>
+                </div>
+                <div class="pb-2">
+                    <a href="https://wa.me/5545999999999" target="_blank" class="text-secondary font-bold flex items-center gap-2 group border-b-2 border-secondary/20 pb-1 hover:border-secondary transition-all">
+                        Falar sobre um procedimento
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+                <!-- Card 1 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Cirurgia</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Reconstrução de LCA</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Procedimento para restaurar a estabilidade do joelho em pacientes com rompimento do Ligamento Cruzado Anterior.</p>
+                    <i data-lucide="stethoscope" class="w-6 h-6 text-primary/20"></i>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Degenerativo</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Prótese de Joelho</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Substituição articular (Artroplastia) para casos de artrose severa, devolvendo a qualidade de vida e mobilidade.</p>
+                    <i data-lucide="activity" class="w-6 h-6 text-primary/20"></i>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Minimamente Invasivo</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Cirurgia de Menisco</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Sutura meniscal e meniscectomia preservadora através de vídeo (Artroscopia) com rápida recuperação.</p>
+                    <i data-lucide="target" class="w-6 h-6 text-primary/20"></i>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Tratamento Clínico</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Infiltração com Ácido Hialurônico</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Viscossuplementação para lubrificar a articulação e reduzir dores causadas pelo desgaste da cartilagem.</p>
+                    <i data-lucide="droplet" class="w-6 h-6 text-primary/20"></i>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Biomecânica</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Osteotomia de Joelho</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Correção do alinhamento ósseo para aliviar a pressão em áreas desgastadas do joelho, prevenindo a artrose.</p>
+                    <i data-lucide="move" class="w-6 h-6 text-primary/20"></i>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
+                    <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Complexidade</h4>
+                    <h3 class="text-xl font-bold text-primary mb-4">Instabilidade da Patela</h3>
+                    <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Tratamento e correção cirúrgica para luxações recorrentes da rótula (patela).</p>
+                    <i data-lucide="layers" class="w-6 h-6 text-primary/20"></i>
+                </div>
+            </div>
+
+            <!-- Outros serviços badges -->
+            <div class="mt-16 flex flex-wrap justify-center gap-4 reveal">
+                <span class="px-5 py-2 bg-slate-50 text-slate-500 text-xs font-bold rounded-full border border-slate-100 uppercase tracking-widest">Lesões de Cartilagem</span>
+                <span class="px-5 py-2 bg-slate-50 text-slate-500 text-xs font-bold rounded-full border border-slate-100 uppercase tracking-widest">Traumatologia</span>
+                <span class="px-5 py-2 bg-slate-50 text-slate-500 text-xs font-bold rounded-full border border-slate-100 uppercase tracking-widest">Segunda Opinião</span>
+                <span class="px-5 py-2 bg-slate-50 text-slate-500 text-xs font-bold rounded-full border border-slate-100 uppercase tracking-widest">Tendinite e Bursite</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 bg-primary text-white overflow-hidden relative">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80')] opacity-5 mix-blend-overlay"></div>
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <div class="lg:w-2/5 reveal">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-secondary/20 rounded-[40px] rotate-3 transition-transform group-hover:rotate-6"></div>
+                        <img src="imgs/cassiano-veronezi-sobre.JPG" alt="Dr. Cassiano Veronezi" class="relative z-10 rounded-[32px] w-full h-auto transition-all duration-700 shadow-2xl">
+                    </div>
+                </div>
+
+                <div class="lg:w-3/5 reveal">
+                    <span class="text-secondary font-bold text-sm uppercase tracking-widest mb-6 block">Conheça o Especialista</span>
+                    <h2 class="text-3xl lg:text-5xl font-bold font-heading mb-8 leading-tight">Dr. Cassiano Veronezi</h2>
+                    
+                    <div class="space-y-6 text-white/70 text-lg font-light leading-relaxed">
+                        <p>O <strong class="text-white">Dr. Cassiano Veronezi</strong> (CRM-PR 28913 / RQE 21542) é médico Ortopedista e Traumatologista, especialista em Cirurgia do Joelho com atuação em Toledo e Cascavel, PR.</p>
+                        
+                        <p>Membro Titular da Sociedade Brasileira de Ortopedia e Traumatologia (SBOT) e da Sociedade Brasileira de Cirurgia do Joelho (SBCJ), o Dr. Cassiano une o rigor acadêmico como Preceptor de Residência Médica à prática clínica avançada.</p>
+                        
+                        <ul class="grid sm:grid-cols-2 gap-4 mt-8">
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-sm text-white/90">Cirurgia do Joelho</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-sm text-white/90">Tratamento de LCA</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-sm text-white/90">Prótese e Artrose</span>
+                            </li>
+                            <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <span class="text-sm text-white/90">Lesões Esportivas</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-12 flex flex-col sm:flex-row gap-6 items-center">
+                        <a href="https://wa.me/5545999999999" target="_blank" class="w-full sm:w-auto px-10 py-5 bg-white text-primary rounded-2xl font-bold hover:bg-secondary hover:text-white transition-all text-center flex items-center justify-center gap-3">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            Falar com o Doutor
+                        </a>
+                        <div class="text-secondary font-bold text-xs uppercase tracking-widest border-l border-white/20 pl-6 hidden sm:block">
+                            Especialista Referência<br> em Ortopedia
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-24 bg-surface overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">A voz dos pacientes</span>
+                <h2 class="text-3xl lg:text-5xl font-bold font-heading text-primary mb-6">Histórias de Sucesso</h2>
+                <p class="text-slate-500 text-lg">A maior satisfação do Dr. Cassiano é ver seus pacientes retomando suas atividades favoritas sem limitações.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                <!-- Depoimento 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Fiz a cirurgia de LCA com o Dr. Cassiano e a recuperação foi surpreendente. Em poucos meses já estava voltando a treinar com total segurança. Um profissional humano e extremamente técnico."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-primary font-bold">RM</div>
+                        <div>
+                            <p class="font-bold text-primary leading-none mb-1">Ricardo Mendes</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Atleta Amador</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Depois de anos sofrendo com artrose no joelho, a cirurgia de prótese mudou minha vida. Voltei a caminhar sem dor e a brincar com meus netos. Gratidão eterna ao Dr. Cassiano."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-primary font-bold">MS</div>
+                        <div>
+                            <p class="font-bold text-primary leading-none mb-1">Maria Silveira</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Aposentada</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
+                        <i data-lucide="quote" class="w-5 h-5"></i>
+                    </div>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Excelente atendimento desde a primeira consulta. O Dr. explicou todo o diagnóstico de menisco com calma e me deu segurança para o tratamento. Recomendo muito!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-primary font-bold">JP</div>
+                        <div>
+                            <p class="font-bold text-primary leading-none mb-1">João Pedro Lima</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Empresário</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Central de Ajuda</span>
+                <h2 class="text-3xl lg:text-5xl font-bold font-heading text-primary mb-6">Dúvidas Frequentes</h2>
+                <p class="text-slate-500 text-lg">Preparamos respostas para as perguntas mais comuns de nossos pacientes.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto flex flex-col gap-4">
+                <!-- Item 1 -->
+                <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-primary">Quanto tempo dura a recuperação de uma cirurgia de LCA?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
+                        O tempo médio para retorno total ao esporte gira em torno de 6 a 9 meses, mas a reabilitação funcional começa logo nos primeiros dias após o procedimento, focando em fisioterapia intensiva.
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-primary">A prótese de joelho é definitiva?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
+                        As próteses modernas possuem altíssima durabilidade, podendo chegar a 15-20 anos ou mais, dependendo do perfil do paciente e dos cuidados após a cirurgia.
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
+                    <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-primary">O atendimento aceita convênios?</span>
+                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
+                        Trabalhamos com diversos convênios e também atendimentos particulares. Recomendamos entrar em contato via WhatsApp para confirmar a cobertura do seu plano específico.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Master -->
+    <footer class="bg-dark text-white pt-24 pb-8 overflow-hidden relative">
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-32 mb-16 border-b border-white/5 pb-16">
+                
+                <div class="lg:w-1/3">
+                    <a href="#" class="flex items-center gap-2 mb-8">
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-secondary">
+                            <i data-lucide="activity" class="w-8 h-8"></i>
+                        </div>
+                        <div class="flex flex-col leading-none">
+                            <span class="text-2xl font-bold tracking-tight font-heading">DR. CASSIANO</span>
+                            <span class="text-xs font-semibold text-secondary tracking-[0.2em] uppercase">VERONEZI</span>
+                        </div>
+                    </a>
+                    <p class="text-white/50 font-light leading-relaxed mb-8">Especialista em cirurgia do joelho dedicado a devolver a performance e a qualidade de vida aos seus pacientes.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 grid sm:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-secondary mb-8">Localização</h4>
+                        <div class="flex gap-4 items-start">
+                            <div class="p-3 bg-white/5 rounded-xl text-secondary">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">CEOT Cascavel</p>
+                                <p class="text-sm text-white/50 leading-relaxed">Rua Dom Pedro II, 2139<br>Centro – Cascavel/PR<br>CEP 85801-160</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex gap-4 items-start border-t border-white/5 pt-8">
+                            <div class="p-3 bg-white/5 rounded-xl text-secondary">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Atendimento</p>
+                                <p class="text-sm text-white/50 leading-relaxed">Segunda a Sexta<br>08h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-secondary mb-8">Contato Direto</h4>
+                        <a href="tel:+5545999999999" class="flex items-center gap-4 mb-6 hover:text-secondary transition-colors">
+                            <div class="p-3 bg-white/5 rounded-xl">
+                                <i data-lucide="phone" class="w-5 h-5 text-secondary"></i>
+                            </div>
+                            <span class="text-lg font-bold">(45) 99999-9999</span>
+                        </a>
+                        <a href="https://wa.me/5545999999999" target="_blank" class="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-secondary/20 transition-all hover:scale-[1.02]">
+                            <i data-lucide="message-square" class="w-6 h-6"></i>
+                            Agendar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">
+                <p>&copy; 2026 Dr. Cassiano Veronezi. Todos os Direitos Reservados.</p>
+                <div class="flex gap-8">
+                    <span>Design por <a href="#" class="text-white/50 hover:text-secondary">P2M</a></span>
+                    <span>CRM-PR 28913</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        // Reveal no scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Inicial
+
+        // Menu Toggle
+        const menuBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Fecha outros FAQs (opcional)
+            /*
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if(item !== content) item.classList.add('hidden');
+            });
+            document.querySelectorAll('.faq-item i').forEach(i => {
+                if(i !== icon) i.style.transform = 'rotate(0deg)';
+            });
+            */
+
+            content.classList.toggle('hidden');
+            icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+        }
+
+        // Header Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-lg');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('py-2', 'shadow-lg');
+                header.classList.add('py-4');
+            }
+        });
+    </script>
+
+</body>
+</html>
