@@ -14,14 +14,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imgs/Design-sem-nome-19.png">
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P38WS8VZ');</script>
-    <!-- End Google Tag Manager -->
-    
+    <!-- Google Tag Manager será inicializado via initTracking() após consentimento LGPD -->
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -571,6 +565,7 @@
                 <p>&copy; 2026 Dr. Cassiano Veronezi. Todos os Direitos Reservados.</p>
                 <div class="flex gap-8">
                     <span>Design por <a href="#" class="text-white/50 hover:text-secondary">P2M</a></span>
+                    <span><a href="#" onclick="event.preventDefault(); abrirPrivacidadeModal();" class="text-white/50 hover:text-secondary">Política de Privacidade</a></span>
                     <span>CRM-PR 27666 | RQE 18908</span>
                 </div>
             </div>
@@ -634,6 +629,173 @@
             }
         });
     </script>
+
+<!-- ============================================================
+     LGPD — BANNER DE COOKIES + MODAL DE PRIVACIDADE
+============================================================ -->
+<style>
+  .p2m-cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+    background: #020617; color: #e2e8f0;
+    border-top: 1px solid #159ec8;
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.5);
+    padding: 1.25rem 1.5rem; display: none;
+    font-family: 'Outfit', sans-serif;
+    animation: p2mSlideUp 0.4s ease-out;
+  }
+  .p2m-cookie-banner.visible { display: block; }
+  @keyframes p2mSlideUp { from { transform: translateY(100%); opacity:0;} to {transform:translateY(0); opacity:1;} }
+  .p2m-cookie-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: space-between; }
+  .p2m-cookie-text { flex: 1; min-width: 280px; font-size: 0.88rem; color: #cbd5e1; line-height: 1.55; }
+  .p2m-cookie-text a { color: #159ec8; font-weight: 600; text-decoration: underline; cursor: pointer; }
+  .p2m-cookie-actions { display: flex; gap: 0.75rem; flex-shrink: 0; }
+  .p2m-btn { font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 0.7rem 1.5rem; border-radius: 9999px; cursor: pointer; border: none; transition: all 0.2s ease; white-space: nowrap; }
+  .p2m-btn-accept { background: #159ec8; color: #fff; box-shadow: 0 4px 14px rgba(21,158,200,0.3); }
+  .p2m-btn-accept:hover { background: #0e2a40; transform: translateY(-1px); }
+  .p2m-btn-decline { background: transparent; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.2); }
+  .p2m-btn-decline:hover { background: rgba(255,255,255,0.05); color: #fff; }
+  @media (max-width: 640px) { .p2m-cookie-inner { flex-direction: column; align-items: stretch; } .p2m-cookie-actions { width: 100%; } .p2m-btn { flex: 1; } }
+
+  .p2m-privacy-overlay { position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; padding: 1.5rem; opacity: 0; transition: opacity 0.3s ease; }
+  .p2m-privacy-overlay.open { display: flex; opacity: 1; }
+  .p2m-privacy-box { background: #fff; border-radius: 20px; max-width: 760px; width: 100%; max-height: 88vh; display: flex; flex-direction: column; overflow: hidden; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+  .p2m-privacy-head { padding: 1.75rem 2rem 1rem; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .p2m-privacy-head h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; font-weight: 700; color: #0e2a40; letter-spacing: -0.01em; }
+  .p2m-privacy-close { background: #f1f5f9; border: none; width: 38px; height: 38px; min-width: 38px; border-radius: 50%; cursor: pointer; color: #0e2a40; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .p2m-privacy-close:hover { background: #e2e8f0; }
+  .p2m-privacy-body { padding: 1.5rem 2rem 2rem; overflow-y: auto; font-family: 'Outfit', sans-serif; color: #475569; font-size: 0.92rem; line-height: 1.7; }
+  .p2m-privacy-body h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 700; color: #0e2a40; margin: 1.6rem 0 0.5rem; }
+  .p2m-privacy-body h3:first-child { margin-top: 0; }
+  .p2m-privacy-body p, .p2m-privacy-body ul { margin-bottom: 0.8rem; }
+  .p2m-privacy-body ul { padding-left: 1.4rem; }
+  .p2m-privacy-body li { margin-bottom: 0.4rem; }
+  .p2m-privacy-body strong { color: #0e2a40; }
+  .p2m-privacy-body a { color: #159ec8; font-weight: 600; }
+  .p2m-privacy-update { font-size: 0.8rem; color: #64748b; opacity: 0.8; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+</style>
+
+<div class="p2m-cookie-banner" id="p2mCookieBanner" role="dialog" aria-label="Aviso de cookies">
+  <div class="p2m-cookie-inner">
+    <p class="p2m-cookie-text">
+      Utilizamos cookies e tecnologias de rastreamento para melhorar sua experiência e exibir conteúdo relevante. Ao continuar, você concorda com nossa
+      <a onclick="abrirPrivacidadeModal()">Política de Privacidade</a>.
+    </p>
+    <div class="p2m-cookie-actions">
+      <button class="p2m-btn p2m-btn-decline" onclick="p2mCookieDecline()">Recusar</button>
+      <button class="p2m-btn p2m-btn-accept" onclick="p2mCookieAccept()">Aceitar</button>
+    </div>
+  </div>
+</div>
+
+<div class="p2m-privacy-overlay" id="p2mPrivacyOverlay" onclick="if(event.target===this)fecharPrivacidadeModal()">
+  <div class="p2m-privacy-box" role="dialog" aria-labelledby="p2mPrivacyTitle">
+    <div class="p2m-privacy-head">
+      <h2 id="p2mPrivacyTitle">Política de Privacidade</h2>
+      <button class="p2m-privacy-close" onclick="fecharPrivacidadeModal()" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="p2m-privacy-body">
+      <h3>1. Responsável pelos dados</h3>
+      <p>O <strong>Dr. Cassiano Veronezi</strong> (CRM-PR 27666 / RQE 18908), médico Ortopedista e Traumatologista, com atendimento no <strong>CEOT Cascavel</strong> — Rua Dom Pedro II, 2139 — Centro, Cascavel/PR (CEP 85801-160), é o controlador dos dados pessoais coletados neste site, em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD)</strong>.</p>
+
+      <h3>2. Dados coletados</h3>
+      <ul>
+        <li><strong>Dados de navegação:</strong> endereço IP, tipo de navegador, páginas visitadas, tempo de permanência, origem do tráfego.</li>
+        <li><strong>Cookies de rastreamento:</strong> identificadores anônimos para análise de audiência e remarketing publicitário.</li>
+        <li><strong>Dados de contato:</strong> apenas se você nos enviar mensagem voluntariamente via WhatsApp, telefone ou e-mail (nome, telefone, e-mail).</li>
+      </ul>
+
+      <h3>3. Finalidade do uso</h3>
+      <ul>
+        <li>Análise de tráfego e melhoria contínua do site;</li>
+        <li>Remarketing e veiculação de campanhas publicitárias relevantes;</li>
+        <li>Atendimento a solicitações enviadas pelos canais de contato;</li>
+        <li>Cumprimento de obrigações legais e regulatórias.</li>
+      </ul>
+
+      <h3>4. Ferramentas de terceiros</h3>
+      <p>Este site pode utilizar tecnologias de rastreamento de terceiros, mediante o seu consentimento, incluindo:</p>
+      <ul>
+        <li><strong>Google Tag Manager</strong> — container que gerencia tags de análise e mensuração (Google Analytics, Google Ads etc.).</li>
+      </ul>
+      <p>Esses serviços possuem políticas de privacidade próprias, que recomendamos que você consulte.</p>
+
+      <h3>5. Seus direitos (Art. 18 da LGPD)</h3>
+      <p>Você pode, a qualquer momento, exercer os seguintes direitos:</p>
+      <ul>
+        <li>Confirmação da existência de tratamento de seus dados;</li>
+        <li>Acesso aos dados;</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Portabilidade a outro fornecedor;</li>
+        <li>Eliminação dos dados tratados com consentimento;</li>
+        <li>Revogação do consentimento.</li>
+      </ul>
+
+      <h3>6. Cookies — gerenciamento</h3>
+      <p>Você pode aceitar ou recusar os cookies de rastreamento no banner exibido em sua primeira visita. A escolha fica salva em seu navegador. Para alterá-la, basta limpar o armazenamento local deste site nas configurações do navegador.</p>
+
+      <h3>7. Armazenamento e segurança</h3>
+      <p>Os dados são armazenados em ambiente controlado, com medidas técnicas e administrativas de proteção. Prontuários médicos são mantidos pelo prazo mínimo de <strong>20 anos</strong>, conforme Resolução CFM nº 1.821/2007.</p>
+
+      <h3>8. Contato (Encarregado/DPO)</h3>
+      <p>Para exercer seus direitos ou tirar dúvidas:</p>
+      <ul>
+        <li>WhatsApp: <a href="https://wa.me/554532221440" target="_blank" rel="noopener">(45) 3222-1440</a></li>
+        <li>Telefone: (45) 3222-1440</li>
+      </ul>
+
+      <p class="p2m-privacy-update">Última atualização: abril de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const P2M_CONSENT_KEY = 'p2m_cookie_consent';
+
+  function initTracking() {
+    if (window.__p2mTrackingInit) return;
+    window.__p2mTrackingInit = true;
+
+    // Google Tag Manager — GTM-P38WS8VZ
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P38WS8VZ');
+  }
+
+  function p2mCookieAccept() {
+    localStorage.setItem(P2M_CONSENT_KEY, 'accepted');
+    document.getElementById('p2mCookieBanner').classList.remove('visible');
+    initTracking();
+  }
+  function p2mCookieDecline() {
+    localStorage.setItem(P2M_CONSENT_KEY, 'declined');
+    document.getElementById('p2mCookieBanner').classList.remove('visible');
+  }
+  function abrirPrivacidadeModal() {
+    document.getElementById('p2mPrivacyOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function fecharPrivacidadeModal() {
+    document.getElementById('p2mPrivacyOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fecharPrivacidadeModal();
+  });
+
+  (function p2mBootstrap() {
+    const consent = localStorage.getItem(P2M_CONSENT_KEY);
+    if (consent === 'accepted') {
+      initTracking();
+    } else if (consent !== 'declined') {
+      document.getElementById('p2mCookieBanner').classList.add('visible');
+    }
+  })();
+</script>
 
 </body>
 </html>
