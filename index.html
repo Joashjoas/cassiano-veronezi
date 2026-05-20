@@ -6,77 +6,17 @@
     <title>Dr. Cassiano Veronezi | Ortopedista e Traumatologista - Cirurgia do Joelho</title>
     <meta name="description" content="Especialista em Cirurgia do Joelho, LCA, Menisco e Artrose em Toledo e Cascavel. Recupere sua mobilidade com o Dr. Cassiano Veronezi.">
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <!-- Fontes self-hosted (WOFF2 variável, font-display: swap) -->
+    <link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/plusjakarta-latin.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imgs/Design-sem-nome-19.png">
-    
+
     <!-- Google Tag Manager será inicializado via initTracking() após consentimento LGPD -->
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0e2a40',        /* Azul Marinho Premium */
-                        secondary: '#159ec8',      /* Azul Claro Destaque */
-                        accent: '#ff8c73',         /* Coral para Call to Action */
-                        surface: '#f8fafc',        /* Fundo claro */
-                        dark: '#020617',
-                    },
-                    fontFamily: {
-                        sans: ['"Outfit"', 'sans-serif'],
-                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'premium': '0 20px 50px rgba(14, 42, 64, 0.1)',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        .glass-header {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(21, 158, 200, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at bottom left, rgba(14, 42, 64, 0.03) 0%, transparent 50%);
-        }
-
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: #159ec8;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <!-- CSS compilado: Tailwind (minificado) + fontes + estilos próprios -->
+    <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Outfit,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.-inset-4{inset:-1rem}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-bottom-10{bottom:-2.5rem}.-left-10{left:-2.5rem}.-left-4{left:-1rem}.-right-10{right:-2.5rem}.-top-10{top:-2.5rem}.-top-4{top:-1rem}.bottom-6{bottom:1.5rem}.left-6{left:1.5rem}.right-6{right:1.5rem}.top-\[73px\]{top:73px}.z-10{z-index:10}.z-50{z-index:50}.order-first{order:-9999}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-24{height:6rem}.h-32{height:8rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-auto{height:auto}.h-full{height:100%}.w-1{width:.25rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-2{width:.5rem}.w-24{width:6rem}.w-3{width:.75rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-\[650px\]{max-width:650px}.max-w-xl{max-width:36rem}.flex-shrink{flex-shrink:1}.-rotate-2{--tw-rotate:-2deg}.-rotate-2,.rotate-3{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-3{--tw-rotate:3deg}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%,to{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.-space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(-.5rem*var(--tw-space-x-reverse));margin-left:calc(-.5rem*(1 - var(--tw-space-x-reverse)))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[32px\]{border-radius:32px}.rounded-\[40px\]{border-radius:40px}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-primary{--tw-border-opacity:1;border-color:rgb(14 42 64/var(--tw-border-opacity,1))}.border-primary\/5{border-color:rgba(14,42,64,.05)}.border-secondary{--tw-border-opacity:1;border-color:rgb(21 158 200/var(--tw-border-opacity,1))}.border-secondary\/20{border-color:rgba(21,158,200,.2)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-50{--tw-border-opacity:1;border-color:rgb(248 250 252/var(--tw-border-opacity,1))}.border-transparent{border-color:transparent}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1))}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-accent{--tw-bg-opacity:1;background-color:rgb(255 140 115/var(--tw-bg-opacity,1))}.bg-accent\/10{background-color:rgba(255,140,115,.1)}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-dark{--tw-bg-opacity:1;background-color:rgb(2 6 23/var(--tw-bg-opacity,1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(14 42 64/var(--tw-bg-opacity,1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(21 158 200/var(--tw-bg-opacity,1))}.bg-secondary\/10{background-color:rgba(21,158,200,.1)}.bg-secondary\/20{background-color:rgba(21,158,200,.2)}.bg-secondary\/5{background-color:rgba(21,158,200,.05)}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184/var(--tw-bg-opacity,1))}.bg-slate-50,.bg-surface{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-white\/50{background-color:hsla(0,0%,100%,.5)}.bg-white\/90{background-color:hsla(0,0%,100%,.9)}.fill-current{fill:currentColor}.p-1{padding:.25rem}.p-10{padding:2.5rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-1{padding-bottom:.25rem}.pb-16{padding-bottom:4rem}.pb-2{padding-bottom:.5rem}.pb-20{padding-bottom:5rem}.pb-8{padding-bottom:2rem}.pl-6{padding-left:1.5rem}.pl-8{padding-left:2rem}.pt-0{padding-top:0}.pt-24{padding-top:6rem}.pt-32{padding-top:8rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-heading{font-family:Plus Jakarta Sans,sans-serif}.font-sans{font-family:Outfit,sans-serif}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:.2em}.tracking-tighter{letter-spacing:-.05em}.tracking-widest{letter-spacing:.1em}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22/var(--tw-text-opacity,1))}.text-primary{--tw-text-opacity:1;color:rgb(14 42 64/var(--tw-text-opacity,1))}.text-primary\/20{color:rgba(14,42,64,.2)}.text-primary\/70{color:rgba(14,42,64,.7)}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-secondary{--tw-text-opacity:1;color:rgb(21 158 200/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.text-white\/30{color:hsla(0,0%,100%,.3)}.text-white\/50{color:hsla(0,0%,100%,.5)}.text-white\/70{color:hsla(0,0%,100%,.7)}.text-white\/90{color:hsla(0,0%,100%,.9)}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-40{opacity:.4}.opacity-5{opacity:.05}.opacity-75{opacity:.75}.mix-blend-overlay{mix-blend-mode:overlay}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-premium{--tw-shadow:0 20px 50px rgba(14,42,64,.1);--tw-shadow-colored:0 20px 50px var(--tw-shadow-color)}.shadow-premium,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-primary{--tw-shadow-color:#0e2a40;--tw-shadow:var(--tw-shadow-colored)}.shadow-primary\/20{--tw-shadow-color:rgba(14,42,64,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-secondary{--tw-shadow-color:#159ec8;--tw-shadow:var(--tw-shadow-colored)}.blur{--tw-blur:blur(8px)}.blur,.blur-2xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-2xl{--tw-blur:blur(40px)}.blur-3xl{--tw-blur:blur(64px)}.blur-3xl,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-1000{transition-duration:1s}.duration-300{transition-duration:.3s}.duration-700{transition-duration:.7s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}@font-face{font-family:Outfit;font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/outfit-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Outfit;font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/outfit-latinext.woff2) format("woff2");unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff}@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/plusjakarta-latin.woff2) format("woff2");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}@font-face{font-family:Plus Jakarta Sans;font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/plusjakarta-latinext.woff2) format("woff2");unicode-range:u+0100-02ba,u+02bd-02c5,u+02c7-02cc,u+02ce-02d7,u+02dd-02ff,u+0304,u+0308,u+0329,u+1d00-1dbf,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff}.glass-header{background:hsla(0,0%,100%,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.hero-gradient{background:radial-gradient(circle at top right,rgba(21,158,200,.05) 0,transparent 50%),radial-gradient(circle at bottom left,rgba(14,42,64,.03) 0,transparent 50%)}.service-card{transition:all .4s cubic-bezier(.4,0,.2,1)}.service-card:hover{transform:translateY(-8px);border-color:#159ec8}.reveal{opacity:0;transform:translateY(30px);transition:all .8s ease-out}.reveal.active{opacity:1;transform:translateY(0)}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem}.hover\:-translate-y-1:hover,.hover\:scale-105:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-secondary:hover{--tw-border-opacity:1;border-color:rgb(21 158 200/var(--tw-border-opacity,1))}.hover\:bg-secondary:hover{--tw-bg-opacity:1;background-color:rgb(21 158 200/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:text-secondary:hover{--tw-text-opacity:1;color:rgb(21 158 200/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.hover\:shadow-2xl:hover,.hover\:shadow-lg:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.hover\:shadow-secondary\/20:hover{--tw-shadow-color:rgba(21,158,200,.2);--tw-shadow:var(--tw-shadow-colored)}.hover\:grayscale-0:hover{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:rotate-6,.group:hover .group-hover\:translate-x-1{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:rotate-6{--tw-rotate:6deg}@media (min-width:640px){.sm\:block{display:block}.sm\:inline{display:inline}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}}@media (min-width:768px){.md\:block{display:block}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width:1024px){.lg\:order-last{order:9999}.lg\:mx-0{margin-left:0;margin-right:0}.lg\:mx-auto{margin-left:auto;margin-right:auto}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:max-h-\[calc\(100vh-12rem\)\]{max-height:calc(100vh - 12rem)}.lg\:min-h-screen{min-height:100vh}.lg\:w-1\/2{width:50%}.lg\:w-1\/3{width:33.333333%}.lg\:w-2\/3{width:66.666667%}.lg\:w-2\/5{width:40%}.lg\:w-3\/5{width:60%}.lg\:w-auto{width:auto}.lg\:w-fit{width:-moz-fit-content;width:fit-content}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-end{align-items:flex-end}.lg\:items-center{align-items:center}.lg\:justify-start{justify-content:flex-start}.lg\:gap-20{gap:5rem}.lg\:gap-24{gap:6rem}.lg\:gap-32{gap:8rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pb-12{padding-bottom:3rem}.lg\:pt-24{padding-top:6rem}.lg\:text-left{text-align:left}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1280px){.xl\:text-7xl{font-size:4.5rem;line-height:1}}</style>
     <!-- Analytics P2M (cookieless) -->
     <script src="/analytics.js"
             data-site="cassiano-veronezi"
@@ -111,11 +51,11 @@
             <!-- CTA Mobile/Desktop -->
             <div class="flex items-center gap-4">
                 <a href="https://wa.me/554532221440?text=Olá, vim do site e gostaria de agendar uma consulta com o Dr. Cassiano Veronezi" target="_blank" class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-secondary hover:shadow-lg transition-all flex items-center gap-2">
-                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg>
                     <span class="hidden sm:inline">Agendar Consulta</span>
                 </a>
                 <button class="lg:hidden text-primary p-1" id="menu-toggle">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>
                 </button>
             </div>
         </div>
@@ -133,7 +73,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-gradient overflow-hidden">
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-24 lg:pb-12 hero-gradient overflow-hidden lg:min-h-screen lg:flex lg:items-center">
         <div class="container mx-auto px-4 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                 
@@ -157,7 +97,7 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="https://wa.me/554532221440?text=Olá, vim do site e gostaria de agendar uma consulta com o Dr. Cassiano Veronezi" target="_blank" class="px-8 py-4 bg-primary text-white rounded-xl text-lg font-bold hover:bg-secondary hover:-translate-y-1 transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3">
-                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /></svg>
                             Quero agendar uma avaliação
                         </a>
                         <div class="flex items-center gap-4 px-6 py-4 bg-white/50 backdrop-blur rounded-xl border border-slate-200">
@@ -176,11 +116,11 @@
                     <!-- Selos de Confiança -->
                     <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
                         <div class="flex items-center gap-2">
-                            <i data-lucide="award" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /><circle cx="12" cy="8" r="6" /></svg>
                             <span class="text-xs font-bold uppercase tracking-tighter">Membro SBOT</span>
                         </div>
                         <div class="flex items-center gap-2 border-l border-slate-300 pl-8">
-                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
                             <span class="text-xs font-bold uppercase tracking-tighter">Especialista SBCJ</span>
                         </div>
                     </div>
@@ -188,19 +128,23 @@
 
                 <!-- Imagem Hero (Maior) -->
                 <div class="w-full lg:w-1/2 relative order-first lg:order-last">
-                    <div class="relative max-w-[650px] mx-auto group">
+                    <div class="relative max-w-[650px] mx-auto group lg:w-fit">
                         <!-- Shape de fundo -->
                         <div class="absolute -inset-4 bg-secondary/5 rounded-[40px] rotate-3 transition-transform group-hover:rotate-6"></div>
                         <div class="absolute -inset-4 border-2 border-primary/5 rounded-[40px] -rotate-2"></div>
                         
                         <!-- Imagem do Doutor (Banner) -->
-                        <div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl">
-                             <img src="imgs/cassiano-veronezi-banner.png" alt="Dr. Cassiano Veronezi" class="w-full h-auto transform hover:scale-105 transition-transform duration-1000">
+                        <div class="relative z-10 rounded-[32px] overflow-hidden shadow-2xl lg:w-fit lg:mx-auto">
+                             <picture class="block w-full lg:w-auto">
+                                 <source srcset="imgs/cassiano-veronezi-banner.avif" type="image/avif">
+                                 <source srcset="imgs/cassiano-veronezi-banner.webp" type="image/webp">
+                                 <img src="imgs/cassiano-veronezi-banner.webp" alt="Dr. Cassiano Veronezi" width="1300" height="1718" fetchpriority="high" decoding="async" class="w-full h-auto lg:w-auto lg:max-h-[calc(100vh-12rem)] transform hover:scale-105 transition-transform duration-1000">
+                             </picture>
                              
                              <!-- Bio floating card -->
                              <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur p-4 rounded-2xl shadow-xl flex items-center gap-4">
                                  <div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
-                                     <i data-lucide="user-check" class="w-6 h-6"></i>
+                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 11 2 2 4-4" /><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
                                  </div>
                                  <div>
                                      <h4 class="text-sm font-bold text-primary leading-tight">Dr. Cassiano Veronezi</h4>
@@ -232,7 +176,7 @@
                 <!-- Dor 1 -->
                 <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal">
                     <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="alert-circle" class="w-7 h-7"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-4">Pane, Estalos e Inchaço</h3>
                     <p class="text-slate-500 font-light leading-relaxed">Sente que o joelho "falha" ou escuta estalos acompanhados de dor? Isso pode indicar lesões de ligamento (LCA) ou menisco.</p>
@@ -240,7 +184,7 @@
                 <!-- Dor 2 -->
                 <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6" /><path d="m22 7-8.5 8.5-5-5L2 17" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-4">Dificuldade de Movimento</h3>
                     <p class="text-slate-500 font-light leading-relaxed">Rigidez matinal ou dificuldade para subir e descer escadas são sinais comuns de artrose ou processos degenerativos.</p>
@@ -248,7 +192,7 @@
                 <!-- Dor 3 -->
                 <div class="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm reveal" style="transition-delay: 200ms;">
                     <div class="w-14 h-14 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-8">
-                        <i data-lucide="zap" class="w-7 h-7"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-primary mb-4">Traumas Esportivos</h3>
                     <p class="text-slate-500 font-light leading-relaxed">Dores agudas após atividades físicas ou entorses necessitam de avaliação imediata para evitar agravamento da lesão.</p>
@@ -268,7 +212,7 @@
                 <div class="pb-2">
                     <a href="https://wa.me/554532221440?text=Olá, vim do site e gostaria de agendar uma consulta com o Dr. Cassiano Veronezi" target="_blank" class="text-secondary font-bold flex items-center gap-2 group border-b-2 border-secondary/20 pb-1 hover:border-secondary transition-all">
                         Falar sobre um procedimento
-                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                     </a>
                 </div>
             </div>
@@ -279,42 +223,42 @@
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Cirurgia</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Reconstrução de LCA</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Procedimento para restaurar a estabilidade do joelho em pacientes com rompimento do Ligamento Cruzado Anterior.</p>
-                    <i data-lucide="stethoscope" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2" /><path d="M5 2v2" /><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1" /><path d="M8 15a6 6 0 0 0 12 0v-3" /><circle cx="20" cy="10" r="2" /></svg>
                 </div>
                 <!-- Card 2 -->
                 <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Degenerativo</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Prótese de Joelho</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Substituição articular (Artroplastia) para casos de artrose severa, devolvendo a qualidade de vida e mobilidade.</p>
-                    <i data-lucide="activity" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
                 </div>
                 <!-- Card 3 -->
                 <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Minimamente Invasivo</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Cirurgia de Menisco</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Sutura meniscal e meniscectomia preservadora através de vídeo (Artroscopia) com rápida recuperação.</p>
-                    <i data-lucide="target" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
                 </div>
                 <!-- Card 4 -->
                 <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Tratamento Clínico</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Infiltração com Ácido Hialurônico</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Viscossuplementação para lubrificar a articulação e reduzir dores causadas pelo desgaste da cartilagem.</p>
-                    <i data-lucide="droplet" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" /></svg>
                 </div>
                 <!-- Card 5 -->
                 <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Biomecânica</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Osteotomia de Joelho</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Correção do alinhamento ósseo para aliviar a pressão em áreas desgastadas do joelho, prevenindo a artrose.</p>
-                    <i data-lucide="move" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20" /><path d="m15 19-3 3-3-3" /><path d="m19 9 3 3-3 3" /><path d="M2 12h20" /><path d="m5 9-3 3 3 3" /><path d="m9 5 3-3 3 3" /></svg>
                 </div>
                 <!-- Card 6 -->
                 <div class="service-card p-8 bg-surface rounded-3xl border-2 border-transparent">
                     <h4 class="text-sm font-bold text-secondary uppercase tracking-widest mb-4">Complexidade</h4>
                     <h3 class="text-xl font-bold text-primary mb-4">Instabilidade da Patela</h3>
                     <p class="text-slate-500 text-sm font-light leading-relaxed mb-6">Tratamento e correção cirúrgica para luxações recorrentes da rótula (patela).</p>
-                    <i data-lucide="layers" class="w-6 h-6 text-primary/20"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 text-primary/20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg>
                 </div>
             </div>
 
@@ -330,14 +274,17 @@
 
     <!-- Sobre Section -->
     <section id="sobre" class="py-24 bg-primary text-white overflow-hidden relative">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80')] opacity-5 mix-blend-overlay"></div>
         <div class="container mx-auto px-4 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 
                 <div class="lg:w-2/5 reveal">
                     <div class="relative group">
                         <div class="absolute -inset-4 bg-secondary/20 rounded-[40px] rotate-3 transition-transform group-hover:rotate-6"></div>
-                        <img src="imgs/cassiano-veronezi-sobre.JPG" alt="Dr. Cassiano Veronezi" class="relative z-10 rounded-[32px] w-full h-auto transition-all duration-700 shadow-2xl">
+                        <picture class="block w-full relative z-10">
+                            <source srcset="imgs/cassiano-veronezi-sobre.avif" type="image/avif">
+                            <source srcset="imgs/cassiano-veronezi-sobre.webp" type="image/webp">
+                            <img src="imgs/cassiano-veronezi-sobre.webp" alt="Dr. Cassiano Veronezi" width="960" height="1440" loading="lazy" decoding="async" class="relative z-10 rounded-[32px] w-full h-auto transition-all duration-700 shadow-2xl">
+                        </picture>
                     </div>
                 </div>
 
@@ -352,19 +299,19 @@
                         
                         <ul class="grid sm:grid-cols-2 gap-4 mt-8">
                             <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg>
                                 <span class="text-sm text-white/90">Cirurgia do Joelho</span>
                             </li>
                             <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg>
                                 <span class="text-sm text-white/90">Tratamento de LCA</span>
                             </li>
                             <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg>
                                 <span class="text-sm text-white/90">Prótese e Artrose</span>
                             </li>
                             <li class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-secondary"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335" /><path d="m9 11 3 3L22 4" /></svg>
                                 <span class="text-sm text-white/90">Lesões Esportivas</span>
                             </li>
                         </ul>
@@ -372,7 +319,7 @@
 
                     <div class="mt-12 flex flex-col sm:flex-row gap-6 items-center">
                         <a href="https://wa.me/554532221440?text=Olá, vim do site e gostaria de agendar uma consulta com o Dr. Cassiano Veronezi" target="_blank" class="w-full sm:w-auto px-10 py-5 bg-white text-primary rounded-2xl font-bold hover:bg-secondary hover:text-white transition-all text-center flex items-center justify-center gap-3">
-                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg>
                             Falar com o Doutor
                         </a>
                         <div class="text-secondary font-bold text-xs uppercase tracking-widest border-l border-white/20 pl-6 hidden sm:block">
@@ -398,14 +345,14 @@
                 <!-- Depoimento 1 -->
                 <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
-                        <i data-lucide="quote" class="w-5 h-5"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></svg>
                     </div>
                     <div class="flex gap-1 text-yellow-400 mb-6">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
                     </div>
                     <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Fiz a cirurgia de LCA com o Dr. Cassiano e a recuperação foi surpreendente. Em poucos meses já estava voltando a treinar com total segurança. Um profissional humano e extremamente técnico."</p>
                     <div class="flex items-center gap-4">
@@ -419,14 +366,14 @@
                 <!-- Depoimento 2 -->
                 <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
-                        <i data-lucide="quote" class="w-5 h-5"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></svg>
                     </div>
                     <div class="flex gap-1 text-yellow-400 mb-6">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
                     </div>
                     <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Depois de anos sofrendo com artrose no joelho, a cirurgia de prótese mudou minha vida. Voltei a caminhar sem dor e a brincar com meus netos. Gratidão eterna ao Dr. Cassiano."</p>
                     <div class="flex items-center gap-4">
@@ -440,14 +387,14 @@
                 <!-- Depoimento 3 -->
                 <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-50 relative">
                     <div class="absolute -top-4 -left-4 w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white shadow-lg">
-                        <i data-lucide="quote" class="w-5 h-5"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></svg>
                     </div>
                     <div class="flex gap-1 text-yellow-400 mb-6">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>
                     </div>
                     <p class="text-slate-600 font-light italic leading-relaxed mb-8">"Excelente atendimento desde a primeira consulta. O Dr. explicou todo o diagnóstico de menisco com calma e me deu segurança para o tratamento. Recomendo muito!"</p>
                     <div class="flex items-center gap-4">
@@ -476,7 +423,7 @@
                 <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
                     <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                         <span class="font-bold text-primary">Quanto tempo dura a recuperação de uma cirurgia de LCA?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary transition-transform duration-300" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
                     </button>
                     <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
                         O tempo médio para retorno total ao esporte gira em torno de 6 a 9 meses, mas a reabilitação funcional começa logo nos primeiros dias após o procedimento, focando em fisioterapia intensiva.
@@ -486,7 +433,7 @@
                 <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
                     <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                         <span class="font-bold text-primary">A prótese de joelho é definitiva?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary transition-transform duration-300" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
                     </button>
                     <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
                         As próteses modernas possuem altíssima durabilidade, podendo chegar a 15-20 anos ou mais, dependendo do perfil do paciente e dos cuidados após a cirurgia.
@@ -496,7 +443,7 @@
                 <div class="faq-item border border-slate-100 rounded-2xl overflow-hidden reveal">
                     <button class="w-full flex justify-between items-center p-6 text-left hover:bg-slate-50 transition-colors" onclick="toggleFaq(this)">
                         <span class="font-bold text-primary">O atendimento aceita convênios?</span>
-                        <i data-lucide="plus" class="w-5 h-5 text-secondary transition-transform duration-300"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary transition-transform duration-300" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
                     </button>
                     <div class="faq-content hidden p-6 pt-0 text-slate-500 font-light leading-relaxed bg-white border-t border-slate-50">
                         Trabalhamos com diversos convênios e também atendimentos particulares. Recomendamos entrar em contato via WhatsApp para confirmar a cobertura do seu plano específico.
@@ -518,10 +465,10 @@
                     <p class="text-white/50 font-light leading-relaxed mb-8">Especialista em cirurgia do joelho dedicado a devolver a performance e a qualidade de vida aos seus pacientes.</p>
                     <div class="flex gap-4">
                         <a href="https://instagram.com" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all text-white">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
                         </a>
                         <a href="https://facebook.com" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-all text-white">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" aria-hidden="true" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -531,7 +478,7 @@
                         <h4 class="text-sm font-bold uppercase tracking-widest text-secondary mb-8">Localização</h4>
                         <div class="flex gap-4 items-start">
                             <div class="p-3 bg-white/10 rounded-xl text-secondary">
-                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
                             </div>
                             <div>
                                 <p class="font-bold text-white mb-2">CEOT Cascavel</p>
@@ -540,7 +487,7 @@
                         </div>
                         <div class="mt-8 flex gap-4 items-start border-t border-white/5 pt-8">
                             <div class="p-3 bg-white/10 rounded-xl text-secondary">
-                                <i data-lucide="clock" class="w-6 h-6"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
                             </div>
                             <div>
                                 <p class="font-bold text-white mb-2">Atendimento</p>
@@ -553,12 +500,12 @@
                         <h4 class="text-sm font-bold uppercase tracking-widest text-secondary mb-8">Contato Direto</h4>
                         <a href="tel:+554532221440" class="flex items-center gap-4 mb-6 hover:text-secondary transition-colors">
                             <div class="p-3 bg-white/10 rounded-xl">
-                                <i data-lucide="phone" class="w-5 h-5 text-secondary"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 text-secondary" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg>
                             </div>
                             <span class="text-lg font-bold">(45) 3222-1440</span>
                         </a>
                         <a href="https://wa.me/554532221440?text=Olá, vim do site e gostaria de agendar uma consulta com o Dr. Cassiano Veronezi" target="_blank" class="w-full flex items-center justify-center gap-3 px-8 py-5 bg-secondary text-white rounded-2xl font-bold hover:shadow-2xl hover:shadow-secondary/20 transition-all hover:scale-[1.02]">
-                            <i data-lucide="message-square" class="w-6 h-6"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg>
                             Agendar por WhatsApp
                         </a>
                     </div>
@@ -579,7 +526,6 @@
 
     <!-- Scripts -->
     <script>
-        lucide.createIcons();
 
         // Reveal no scroll
         function reveal() {
@@ -606,7 +552,7 @@
         // FAQ Toggle
         function toggleFaq(button) {
             const content = button.nextElementSibling;
-            const icon = button.querySelector('i');
+            const icon = button.querySelector('svg');
             
             // Fecha outros FAQs (opcional)
             /*
@@ -683,7 +629,7 @@
   <div class="p2m-cookie-inner">
     <p class="p2m-cookie-text">
       Utilizamos cookies e tecnologias de rastreamento para melhorar sua experiência e exibir conteúdo relevante. Ao continuar, você concorda com nossa
-      <a onclick="abrirPrivacidadeModal()">Política de Privacidade</a>.
+      <a href="#" onclick="event.preventDefault(); abrirPrivacidadeModal();">Política de Privacidade</a>.
     </p>
     <div class="p2m-cookie-actions">
       <button class="p2m-btn p2m-btn-decline" onclick="p2mCookieDecline()">Recusar</button>
