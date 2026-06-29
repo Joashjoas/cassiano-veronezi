@@ -90,6 +90,12 @@
   document.addEventListener('click', function (e) {
     const link = e.target.closest && e.target.closest('a[href*="wa.me"]');
     if (!link) return;
+    // conta apenas 1 clique de WhatsApp por sessão (mesma base do session_id)
+    const ss = safeStorage('sessionStorage');
+    if (ss) {
+      if (ss.getItem('p2m_wa_clicked')) return;
+      ss.setItem('p2m_wa_clicked', '1');
+    }
     send('click_whatsapp');
   });
 
