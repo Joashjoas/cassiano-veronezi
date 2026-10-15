@@ -15,11 +15,19 @@
 
   function urlParams() {
     const q = new URLSearchParams(window.location.search);
+    // Clique pago do Google no iOS chega com gbraid/wbraid no lugar do gclid.
+    // Vai no mesmo campo, com prefixo, pra contar como Google Ads sem mudar o
+    // banco nem o worker (o prefixo permite separar depois).
+    const gbraid = q.get('gbraid');
+    const wbraid = q.get('wbraid');
     return {
-      gclid: q.get('gclid') || '',
+      gclid: q.get('gclid') || (gbraid ? 'gbraid:' + gbraid : '') || (wbraid ? 'wbraid:' + wbraid : ''),
+      fbclid: q.get('fbclid') || '',
       utm_source: q.get('utm_source') || '',
       utm_medium: q.get('utm_medium') || '',
-      utm_campaign: q.get('utm_campaign') || ''
+      utm_campaign: q.get('utm_campaign') || '',
+      utm_content: q.get('utm_content') || '',
+      utm_term: q.get('utm_term') || ''
     };
   }
 
@@ -49,6 +57,8 @@
     if (!gclid) return null;
     const ls = safeStorage('localStorage');
     if (!ls) return null;
+    // visitante escolheu "Rejeitar" no banner (p2m-tags): não guarda o gclid
+    if (ls.getItem('p2m_consent') === 'rejeitar') return null;
     const key = 'p2m_gclid_' + gclid;
     if (ls.getItem(key)) return false;
     ls.setItem(key, String(Date.now()));
@@ -87,17 +97,27 @@
     send('pageview');
   }
 
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest && e.target.closest('a[href*="wa.me"]');
-    if (!link) return;
-    // conta apenas 1 clique de WhatsApp por sessão (mesma base do session_id)
+  // conta apenas 1 clique de WhatsApp por sessão (mesma base do session_id)
+  function whatsappClick() {
     const ss = safeStorage('sessionStorage');
     if (ss) {
       if (ss.getItem('p2m_wa_clicked')) return;
       ss.setItem('p2m_wa_clicked', '1');
     }
     send('click_whatsapp');
+  }
+
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest && e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (link) whatsappClick();
   });
+
+  // botões que abrem o WhatsApp por JS (onclick → window.open) em vez de link
+  const openOriginal = window.open;
+  window.open = function (url) {
+    try { if (url && /wa\.me\/|api\.whatsapp\.com\//i.test(String(url))) whatsappClick(); } catch (_) {}
+    return openOriginal.apply(window, arguments);
+  };
 
   window.p2mAnalytics = { send: send };
 })();
